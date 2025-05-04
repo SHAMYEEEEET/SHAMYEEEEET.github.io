@@ -420,3 +420,38 @@ nav {
     margin-top: 1rem;
   }
 }
+footer .socials a {
+  color: var(--link-color);
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+footer .socials a:hover {
+  color: var(--button-text);
+}
+
+footer .socials a i {
+  font-size: 1.5rem; /* Make the icons slightly bigger */
+}
+
+footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+footer .socials a i {
+  font-size: 1.5rem;
+  color: var(--link-color);
+  transition: color 0.3s;
+}
+
+footer .socials a:hover i {
+  color: var(--button-text);
+}
