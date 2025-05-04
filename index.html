@@ -1,28 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shamit Mukati - About Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>Welcome to My Portfolio!!!</header>
-    <div class="container">
-        <h2>About Me</h2>
-        <p>Hello! I have learned complete HTML and enough CSS and JavaScript to build front-end web pages.</p>
-        <h2>Projects</h2>
-        <ul>
-            <li>Project 1 - A cool landing page</li>
-            <li>Project 2 - An interactive form</li>
-            <li>Project 3 - A simple JavaScript game</li>
-        </ul>
-        <button onclick="showMessage()">Click Me</button>
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">Shamit Mukati</a>
+    <div class="dropdown">
+      <button class="dropbtn">Projects ▾</button>
+      <div class="dropdown-content">
+        <a href="#project1">Web Portfolio</a>
+        <a href="#project2">Flutter App</a>
+        <a href="#project3">Data Entry Tool</a>
+      </div>
     </div>
-    <script>
-        function showMessage() {
-            alert("Thanks for visiting my portfolio!");
-        }
-    </script>
+  </div>
+</nav>
+
+  <div class="container">
+    <div class="about-section">
+      <img src="profile.jpg" height=300px,width=300px alt="Shamit Mukati" class="profile-img" />
+
+      <div class="about-text">
+        <h1>Hi, I'm Shamit</h1>
+        <p>
+          I’m <strong>Shamit Mukati</strong> — a passionate freelancer with strong expertise in
+          <strong>web development</strong> and <strong>Flutter app development</strong>. With years of hands-on experience,
+          I specialize in crafting stunning websites, building high-performance mobile apps, crunching complex data,
+          and handling data entry with precision.
+        </p>
+        <p>
+          I’m committed to delivering <strong>high-quality, tailored solutions</strong> that meet your unique needs —
+          on time and within budget. From clean design to smooth functionality, I bring a <strong>detail-driven approach</strong> to every project.
+        </p>
+        <p>
+          If you’re looking for someone <strong>reliable, creative, and easy to communicate with</strong> — let’s team up and
+          bring your ideas to life.
+        </p>
+      </div>
+    </div>
+
+    <h2>Connect with me</h2>
+    <div class="socials">
+  	<a href="https://github.com/shamyeeeeet" target="_blank">
+    	<i class="fab fa-github"></i> GitHub
+  	</a>
+  	<a href="https://linkedin.com/in/shamit-m" target="_blank">
+    	<i class="fab fa-linkedin"></i> LinkedIn
+  	</a>
+  	<a href="https://instagram.com/shamit.1905" target="_blank">
+    	<i class="fab fa-instagram"></i> Instagram
+  	</a>
+	</div>
+
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" onclick="toggleDarkMode()" id="themeButton">🌙</button>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

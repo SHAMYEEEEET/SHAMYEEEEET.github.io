@@ -1,33 +1,166 @@
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --link-color: #007bff;
+  --button-bg: #007bff;
+  --button-text: white;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  transition: background-color 0.3s, color 0.3s;
 }
-header {
-    background: #333;
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-}
+
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
 }
-button {
-    background: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 5px;
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  margin: 0 10px;
 }
-button:hover {
-    background: #218838;
+
+a:hover {
+  text-decoration: underline;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --link-color: #66ccff;
+  --button-bg: #333;
+  --button-text: #f0f0f0;
+}
+
+/* Floating Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--button-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  max-width: 1000px;
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-text {
+    flex: 1;
+  }
+
+  .profile-img {
+    margin-left: 2rem;
+  }
+}
+/* Navbar */
+.navbar {
+  background-color: var(--button-bg);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--button-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--bg-color);
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
