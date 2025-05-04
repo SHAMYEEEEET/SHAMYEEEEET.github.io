@@ -254,9 +254,7 @@ footer .socials a {
   transition: color 0.3s;
 }
 
-footer .socials a:hover {
-  color: var(--button-text);
-}
+
 html {
   scroll-behavior: smooth;
 }
@@ -309,8 +307,9 @@ body {
   transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-  color: var(--button-text);
+.navbar a[href="#home"]:hover,
+.navbar a[href="#projects"]:hover {
+  color: #ff6600;
 }
 
 .theme-toggle {
@@ -458,4 +457,20 @@ footer .socials a:hover i {
 .socials a i {
   font-family: FontAwesome;
   display: inline-block;
+}
+
+.socials a {
+  color: var(--link-color);
+  transition: color 0.3s;
+}
+
+.socials a[href*="github"]:hover,
+.socials a[href*="linkedin"]:hover,
+.socials a[href*="instagram"]:hover {
+  color: #ff6600;
+}
+
+
+.socials a:hover i {
+  color: #ff6600;
 }
