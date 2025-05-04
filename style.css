@@ -455,3 +455,7 @@ footer .socials a i {
 footer .socials a:hover i {
   color: var(--button-text);
 }
+.socials a i {
+  font-family: FontAwesome;
+  display: inline-block;
+}
